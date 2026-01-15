@@ -20,7 +20,20 @@ def sum_digits_recursive(n: int) -> int:
             last_digit = n % 10
             rest      = n // 10
     """
-    raise NotImplementedError
+
+    # since the iterative version explicitly says Assumes n >= 0
+    # I will not be raising an error for negative numbers
+
+    # This is the base case: when n reaches 0, there are no digits left to sum
+    if n == 0:
+        return 0
+    else:
+        # In the recursive case:
+        # - we extract the last digit
+        # - and then recurse on the remaining digits
+        last_digit = n % 10
+        rest = n // 10
+        return last_digit + sum_digits_recursive(rest)
 
 
 def sum_digits_iterative(n: int) -> int:
