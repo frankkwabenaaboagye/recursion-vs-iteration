@@ -31,4 +31,12 @@ def factorial_iterative(n: int) -> int:
     You should use a loop (for or while). Do NOT call ``factorial_recursive``
     here.
     """
-    raise NotImplementedError
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    if n == 0 :
+        return 1
+    acc = 1
+    for i in range(n, 1, -1):
+        acc = acc * i
+    return acc
+
