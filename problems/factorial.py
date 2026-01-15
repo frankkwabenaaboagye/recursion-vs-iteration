@@ -31,11 +31,21 @@ def factorial_iterative(n: int) -> int:
     You should use a loop (for or while). Do NOT call ``factorial_recursive``
     here.
     """
+
+    # This is a guard against invalid input
     if n < 0:
         raise ValueError("n must be non-negative")
+    
+    # This is sort of like the base case: by definition, 0! == 1
     if n == 0 :
         return 1
+    
+    # Here, the accumulator holds the running product
     acc = 1
+
+    # Multiply n × (n-1) × ... × 2
+    # This loop is to mirror the recursive relation:
+    #   n! = n × (n-1)!
     for i in range(n, 1, -1):
         acc = acc * i
     return acc
