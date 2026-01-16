@@ -24,4 +24,14 @@ def reverse_string_iterative(s: str) -> str:
     You may use a loop and string concatenation or build a list of chars.
     Do NOT just use slicing ``s[::-1]`` here.
     """
-    raise NotImplementedError
+    # using a list to build the reversed characters
+    result = [] 
+
+    # iterate over the string indices in reverse order
+    # this is sort of mirroring the recursive idea of moving forward through the string
+    # while building the result backwards
+    for i in range(len(s) - 1, -1, -1):
+        result.append(s[i])
+    
+    # joining the collected characters into a single string - final reversed String
+    return ''.join(result)
