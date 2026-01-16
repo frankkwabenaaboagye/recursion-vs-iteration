@@ -43,11 +43,11 @@ The problems are (one module per problem):
 
 ~~7. `problems/binary_search.py` – `binary_search_recursive` / `binary_search_iterative`~~
 
-8. `problems/gcd.py` – `gcd_recursive` / `gcd_iterative`
+~~8. `problems/gcd.py` – `gcd_recursive` / `gcd_iterative``~~
 
-9. `problems/count_occurrences.py` – `count_occurrences_recursive` / `count_occurrences_iterative`
+~~9. `problems/count_occurrences.py` – `count_occurrences_recursive` / `count_occurrences_iterative`~~
 
-10. `problems/palindrome.py` – `is_palindrome_recursive` / `is_palindrome_iterative`
+~~10. `problems/palindrome.py` – `is_palindrome_recursive` / `is_palindrome_iterative`~~
 
 
 There is also a fully-solved **example** problem you can use as a
