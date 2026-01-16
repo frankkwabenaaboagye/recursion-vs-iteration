@@ -38,4 +38,21 @@ def flatten_iterative(nested: List[Any]) -> List[Any]:
             stack = [nested]
         Then repeatedly pop from the stack and push its elements.
     """
-    raise NotImplementedError
+
+    # to hold the final flattened result
+    flat = []
+
+    # using an explicit stack to avoid recursion
+    stack = [nested]
+
+    # process the stack until is empty
+    while stack:
+        current = stack.pop()
+        if isinstance(current, list):
+            # Push elements of the list onto the stack in reverse order
+            # we reverse to maintain the original order when popping
+            stack.extend(reversed(current))
+        else:
+            # atomic element, add to the result
+            flat.append(current)
+    return flat
