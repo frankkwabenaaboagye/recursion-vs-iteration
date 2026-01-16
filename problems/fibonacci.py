@@ -22,7 +22,23 @@ def fib_recursive(n: int) -> int:
 
     Your task: implement this recursively (naive recursion is fine).
     """
-    raise NotImplementedError
+
+    # guarding against invalid input
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    
+    # the base case
+    # recursion stops when n = 0 or when n = 1
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    
+    # recursive case
+    # each fibonacci number is the sum of the two preceding ones
+    # the maths definition is:
+    # fib(n) = fib(n-1) + fib(n-2) for n >= 2
+    return fib_recursive(n - 1) + fib_recursive(n - 2)
 
 
 def fib_iterative(n: int) -> int:
