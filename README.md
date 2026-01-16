@@ -30,15 +30,25 @@ module and defines two functions:
 The problems are (one module per problem):
 
 ~~1. `problems/factorial.py` – `factorial_recursive` / `factorial_iterative`~~
+
 ~~2. `problems/sum_digits.py` – `sum_digits_recursive` / `sum_digits_iterative`~~
+
 ~~3. `problems/reverse_string.py` – `reverse_string_recursive` / `reverse_string_iterative`~~
+
 ~~4. `problems/fibonacci.py` – `fib_recursive` / `fib_iterative`~~
+
 ~~5. `problems/power.py` – `power_recursive` / `power_iterative`~~
+
 ~~6. `problems/flatten.py` – `flatten_recursive` / `flatten_iterative`~~
+
 ~~7. `problems/binary_search.py` – `binary_search_recursive` / `binary_search_iterative`~~
+
 8. `problems/gcd.py` – `gcd_recursive` / `gcd_iterative`
+
 9. `problems/count_occurrences.py` – `count_occurrences_recursive` / `count_occurrences_iterative`
+
 10. `problems/palindrome.py` – `is_palindrome_recursive` / `is_palindrome_iterative`
+
 
 There is also a fully-solved **example** problem you can use as a
 reference:
