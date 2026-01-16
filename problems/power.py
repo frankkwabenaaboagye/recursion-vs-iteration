@@ -26,4 +26,20 @@ def power_iterative(base: int | float, exponent: int) -> int | float:
 
     You must not call ``power_recursive`` here.
     """
-    raise NotImplementedError
+
+    # guarding against invalid exponent
+    
+    if exponent < 0:
+        raise ValueError("exponent must be non-negative")
+    result = 1  # keep result initialized to 1
+
+    # any non zero base rised to the power of 0 is 1
+    if exponent == 0:
+        return result
+    
+    # multiply the base by itself exponent times
+    # mirrors the recursive definition:
+    # base ** exponent == base * base ** (exponent - 1)
+    for _ in range(exponent):
+        result *= base
+    return result
