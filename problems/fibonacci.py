@@ -22,7 +22,15 @@ def fib_recursive(n: int) -> int:
 
     Your task: implement this recursively (naive recursion is fine).
     """
-    raise NotImplementedError
+
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    
+    return fib_recursive(n - 1) + fib_recursive(n - 1)
 
 
 def fib_iterative(n: int) -> int:
