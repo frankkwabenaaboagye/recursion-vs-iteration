@@ -17,7 +17,17 @@ def count_occurrences_recursive(nested: List[Any], value: Any) -> int:
         data = [1, [2, 1, [1, 3]], 4]
         count_occurrences_recursive(data, 1) == 3
     """
-    raise NotImplementedError
+    count = 0
+    for item in nested:
+        if isinstance(item, list):
+            # here we recurse into the sublist
+            count = count + count_occurrences_recursive(item, value)
+        else:
+            # atomic element: increment count if it matches value
+            if item == value:
+                count += 1
+    return count
+
 
 
 def count_occurrences_iterative(nested: List[Any], value: Any) -> int:
