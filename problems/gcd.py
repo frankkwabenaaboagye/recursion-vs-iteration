@@ -26,4 +26,13 @@ def gcd_iterative(a: int, b: int) -> int:
     """Compute the greatest common divisor (GCD) of ``a`` and ``b``
     iteratively using the same Euclidean algorithm.
     """
-    raise NotImplementedError
+    # working with absolute values
+    a, b = abs(a), abs(b)
+
+    # we continue until b becomes zero
+    while b != 0:
+        # euclidean step: replace a with b and b with the remainder of a divided by b [a/b]
+        a, b = b, a % b
+
+    # when b become 0, the GCD is stored in a
+    return abs(a)
